@@ -13,7 +13,7 @@
 
         packages = with pkgs;
           [
-            (python.withPackages (ppkgs: [ ppkgs.numpy ]))
+            (python3.withPackages (ppkgs: [ ppkgs.numpy ]))
 
           ]; # whatever you need
 
