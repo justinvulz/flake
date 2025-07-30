@@ -11,11 +11,11 @@
     in {
       devShells.${system}.default = pkgs.mkShell {
 
-        packages = with pkgs;
-          [
-            (python3.withPackages (ppkgs: with ppkgs; [ numpy ]))
+        packages = with pkgs; [
+          (python3.withPackages (ppkgs: with ppkgs; [ numpy ]))
+          ruff
 
-          ]; # whatever you need
+        ]; # whatever you need
 
         shellHook = "";
       };
