@@ -11,7 +11,7 @@
     in {
       devShells.${system}.default = pkgs.mkShell {
 
-        packages = with pkgs; [ uv ]; # whatever you need
+        packages = with pkgs; [ uv ruff ]; # whatever you need
 
         shellHook = "";
       };
