@@ -8,6 +8,14 @@
         path = ./templates/cpp;
         description = "Sy standard c++ env.";
       };
+      nodejs-yarn = {
+        path = ./templates/nodejs-yarn;
+        description = "yarn nodejs";
+      };
+      nodejs = {
+        path = ./templates/nodejs;
+        description = "npm nodejs";
+      };
       python-uv = {
         path = ./templates/python-uv;
         description = "Standard python env (using uv)";
