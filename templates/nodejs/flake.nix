@@ -11,11 +11,11 @@
     in {
       devShells.${system}.default = pkgs.mkShell {
 
-        packages = with pkgs; [
-          nodejs
-          npm
+        packages = with pkgs;
+          [
+            nodejs
 
-        ]; # whatever you need
+          ]; # whatever you need
 
         shellHook = "";
       };
