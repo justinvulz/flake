@@ -11,11 +11,10 @@
     in {
       devShells.${system}.default = pkgs.mkShell {
 
-        packages = with pkgs;
-          [
-            nodejs
-
-          ]; # whatever you need
+        packages = with pkgs; [
+          nodejs
+          typescript-language-server
+        ]; # whatever you need
 
         shellHook = "";
       };
