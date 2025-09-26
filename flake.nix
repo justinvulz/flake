@@ -28,6 +28,10 @@
         path = ./templates/rust;
         description = "Standard rust env.";
       };
+      haskell = {
+        path = ./templates/haskell;
+        description = "Sy standard haskell env.";
+      };
     };
   };
 }
