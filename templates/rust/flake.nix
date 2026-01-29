@@ -4,13 +4,19 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable"; # or whatever vers
   };
 
-  outputs = { self, nixpkgs, ... }:
+  outputs =
+    { nixpkgs, ... }:
     let
       system = "x86_64-linux"; # your version
       pkgs = nixpkgs.legacyPackages.${system};
-    in {
+    in
+    {
       devShells.${system}.default = pkgs.mkShell {
-        packages = with pkgs; [ rustc cargo rust-analyzer ]; # whatever you need
+        packages = with pkgs; [
+          rustc
+          cargo
+          rust-analyzer
+        ]; # whatever you need
       };
     };
 }
