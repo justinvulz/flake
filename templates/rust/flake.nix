@@ -5,7 +5,7 @@
   };
 
   outputs =
-    { nixpkgs, ... }:
+    { self, nixpkgs, ... }:
     let
       system = "x86_64-linux"; # your version
       pkgs = nixpkgs.legacyPackages.${system};
