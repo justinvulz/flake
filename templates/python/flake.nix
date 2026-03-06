@@ -4,16 +4,18 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable"; # or whatever vers
   };
 
-  outputs = { self, nixpkgs, ... }:
+  outputs =
+    { self, nixpkgs, ... }:
     let
       system = "x86_64-linux"; # your version
       pkgs = nixpkgs.legacyPackages.${system};
-    in {
+    in
+    {
       devShells.${system}.default = pkgs.mkShell {
 
         packages = with pkgs; [
           (python3.withPackages (ppkgs: with ppkgs; [ numpy ]))
-          ruff
+          ty
 
         ]; # whatever you need
 
